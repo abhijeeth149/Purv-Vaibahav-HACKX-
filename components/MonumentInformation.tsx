@@ -5,6 +5,7 @@ import { MONUMENTS } from '../constants';
 import { Card } from './common/Card';
 import { Spinner } from './common/Spinner';
 import AiChatbot from './AiChatbot';
+import { SearchableSelect } from './common/SearchableSelect';
 
 interface MonumentInformationProps {
     selectedMonument: Monument | null;
@@ -59,19 +60,12 @@ const MonumentInformation: React.FC<MonumentInformationProps> = ({ selectedMonum
             
             <Card className="p-6 mb-6">
                  <label className="mb-1 font-medium text-sm text-gray-700 dark:text-gray-300">Select a Monument</label>
-                 <select
-                    value={selectedMonument?.id || ''}
-                    onChange={(e) => {
-                        const monument = MONUMENTS.find(m => m.id === parseInt(e.target.value)) || null;
-                        onSelectMonument(monument);
-                    }}
-                    className="w-full p-2.5 border border-gray-300/80 rounded-lg bg-white/80 dark:bg-gray-700/80 dark:border-gray-600/80 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 shadow-sm"
-                >
-                    <option value="" disabled>Select a monument</option>
-                    {MONUMENTS.map(m => (
-                        <option key={m.id} value={m.id}>{m.name}</option>
-                    ))}
-                </select>
+                 <SearchableSelect
+                    options={MONUMENTS}
+                    selectedOption={selectedMonument}
+                    onSelect={onSelectMonument}
+                    placeholder="Select or search for a monument"
+                 />
             </Card>
 
             {selectedMonument && (

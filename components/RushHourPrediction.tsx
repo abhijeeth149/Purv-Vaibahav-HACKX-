@@ -5,6 +5,7 @@ import { MONUMENTS } from '../constants';
 import { Card } from './common/Card';
 import { Button } from './common/Button';
 import { Spinner } from './common/Spinner';
+import { SearchableSelect } from './common/SearchableSelect';
 
 interface RushHourPredictionProps {
     selectedMonument: Monument | null;
@@ -74,19 +75,12 @@ const RushHourPredictionComponent: React.FC<RushHourPredictionProps> = ({ select
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
                     <div className="flex flex-col">
                         <label className="mb-1 font-medium text-sm text-gray-700 dark:text-gray-300">Monument</label>
-                        <select
-                            value={selectedMonument?.id || ''}
-                            onChange={(e) => {
-                                const monument = MONUMENTS.find(m => m.id === parseInt(e.target.value)) || null;
-                                onSelectMonument(monument);
-                            }}
-                            className="w-full p-2.5 border border-gray-300/80 rounded-lg bg-white/80 dark:bg-gray-700/80 dark:border-gray-600/80 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 shadow-sm"
-                        >
-                             <option value="" disabled>Select a monument</option>
-                            {MONUMENTS.map(m => (
-                                <option key={m.id} value={m.id}>{m.name}</option>
-                            ))}
-                        </select>
+                        <SearchableSelect
+                            options={MONUMENTS}
+                            selectedOption={selectedMonument}
+                            onSelect={onSelectMonument}
+                            placeholder="Select or search for a monument"
+                        />
                     </div>
                     <div className="flex flex-col">
                         <label className="mb-1 font-medium text-sm text-gray-700 dark:text-gray-300">Date</label>

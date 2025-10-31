@@ -114,6 +114,10 @@ const AiChatbot: React.FC<AiChatbotProps> = ({ currentMonument }) => {
                              <i className="ph-bold ph-paper-plane-tilt text-lg"></i>
                         </Button>
                     </div>
+                    <div className="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 flex items-center justify-center gap-2">
+                        <i className="ph-bold ph-hands-praying text-lg text-secondary-600 dark:text-secondary-400"></i>
+                        <span>Thank you for visiting Purv Vaibhav!</span>
+                    </div>
                 </div>
             </div>
         </div>
