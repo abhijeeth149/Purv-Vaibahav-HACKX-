@@ -12,7 +12,7 @@ export interface Language {
 }
 
 export interface Tab {
-    id: 'recognize' | 'info' | 'rush' | 'nearby' | 'chat';
+    id: 'recognize' | 'info' | 'rush' | 'nearby';
     label: string;
     icon: string;
 }

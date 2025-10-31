@@ -65,10 +65,10 @@ const AiChatbot: React.FC<AiChatbotProps> = ({ currentMonument }) => {
     ];
 
     return (
-        <div className="h-[calc(100vh-4rem)] flex flex-col">
-            <h2 className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500 dark:from-primary-400 dark:to-secondary-400 mb-4">AI Heritage Guide</h2>
-            <div className="flex-1 bg-white/60 dark:bg-gray-800/60 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 dark:border-gray-700/30 overflow-hidden flex flex-col">
-                <div className="flex-1 p-4 overflow-y-auto space-y-4" style={{
+        <div className="flex flex-col">
+            <h3 className="text-3xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500 dark:from-primary-400 dark:to-secondary-400 mb-4">Ask the AI Guide</h3>
+            <div className="bg-white/60 dark:bg-gray-800/60 backdrop-blur-lg rounded-2xl shadow-lg border border-white/20 dark:border-gray-700/30 overflow-hidden flex flex-col">
+                <div className="flex-1 p-4 overflow-y-auto space-y-4 max-h-[50vh]" style={{
                     backgroundImage: `
                         radial-gradient(circle at 1px 1px, rgba(0,0,0,0.03) 1px, transparent 0),
                         radial-gradient(circle at 1px 1px, rgba(0,0,0,0.03) 1px, transparent 0)

@@ -69,8 +69,6 @@ const App: React.FC = () => {
                 return <RushHourPrediction selectedMonument={selectedMonument} onSelectMonument={handleSelectMonument} />;
             case 'nearby':
                 return <NearbyMonuments onSelectMonument={handleSelectMonument} />;
-            case 'chat':
-                return <AiChatbot currentMonument={selectedMonument} />;
             default:
                 return <MonumentRecognition onRecognitionSuccess={handleRecognitionSuccess}/>;
         }

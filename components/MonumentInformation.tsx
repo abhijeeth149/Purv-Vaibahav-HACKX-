@@ -4,6 +4,7 @@ import type { Monument, MonumentInfo } from '../types';
 import { MONUMENTS } from '../constants';
 import { Card } from './common/Card';
 import { Spinner } from './common/Spinner';
+import AiChatbot from './AiChatbot';
 
 interface MonumentInformationProps {
     selectedMonument: Monument | null;
@@ -74,29 +75,35 @@ const MonumentInformation: React.FC<MonumentInformationProps> = ({ selectedMonum
             </Card>
 
             {selectedMonument && (
-                <Card>
-                    <div className="relative">
-                        <img 
-                            src={`https://source.unsplash.com/1200x400/?${encodeURIComponent(selectedMonument.name)}`} 
-                            alt={selectedMonument.name}
-                            className="w-full h-64 object-cover"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div className="absolute bottom-0 left-0 p-6">
-                             <h2 className="text-3xl font-bold text-white shadow-lg">{selectedMonument.name}</h2>
-                             <p className="text-lg text-gray-200 shadow-sm">{selectedMonument.category}</p>
+                <>
+                    <Card>
+                        <div className="relative">
+                            <img 
+                                src={`https://source.unsplash.com/1200x400/?${encodeURIComponent(selectedMonument.name)}`} 
+                                alt={selectedMonument.name}
+                                className="w-full h-64 object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div className="absolute bottom-0 left-0 p-6">
+                                <h2 className="text-3xl font-bold text-white shadow-lg">{selectedMonument.name}</h2>
+                                <p className="text-lg text-gray-200 shadow-sm">{selectedMonument.category}</p>
+                            </div>
                         </div>
+                    
+                        <div className="p-6">
+                            {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+                            
+                            <InfoSection title="About" content={monumentDetails?.description} icon="ph-book-open-text" />
+                            <InfoSection title="History" content={monumentDetails?.history} icon="ph-scroll" />
+                            <InfoSection title="Best Time to Visit" content={monumentDetails?.bestTimeToVisit} icon="ph-calendar-check" />
+                            <InfoSection title="Entry Fees" content={monumentDetails?.entryFee} icon="ph-ticket" />
+                        </div>
+                    </Card>
+
+                    <div className="mt-8">
+                        <AiChatbot currentMonument={selectedMonument} />
                     </div>
-                   
-                    <div className="p-6">
-                        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-                        
-                        <InfoSection title="About" content={monumentDetails?.description} icon="ph-book-open-text" />
-                        <InfoSection title="History" content={monumentDetails?.history} icon="ph-scroll" />
-                        <InfoSection title="Best Time to Visit" content={monumentDetails?.bestTimeToVisit} icon="ph-calendar-check" />
-                        <InfoSection title="Entry Fees" content={monumentDetails?.entryFee} icon="ph-ticket" />
-                    </div>
-                </Card>
+                </>
             )}
 
             {!selectedMonument && !isLoading && (

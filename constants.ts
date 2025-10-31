@@ -1,4 +1,3 @@
-
 import type { Monument, Language, Tab } from './types';
 
 export const MONUMENTS: Monument[] = [
@@ -27,5 +26,4 @@ export const TABS: Tab[] = [
     { id: 'info', label: 'Information', icon: 'ph-book-open-text' },
     { id: 'rush', label: 'Crowd Predict', icon: 'ph-users-three' },
     { id: 'nearby', label: 'Nearby', icon: 'ph-map-pin' },
-    { id: 'chat', label: 'AI Guide', icon: 'ph-chats-circle' },
 ];
