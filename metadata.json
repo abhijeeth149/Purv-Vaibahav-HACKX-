@@ -1,8 +1,4 @@
 {
   "name": "Smart Cultural Tourism System",
-  "description": "An AI-powered application to identify Indian monuments from photos, provide historical information, predict crowd levels, and offer multilingual support.",
-  "requestFramePermissions": [
-    "camera",
-    "geolocation"
-  ]
+  "description": "An AI-powered application to identify Indian monuments from photos, provide historical information, predict crowd levels, and offer multilingual support."
 }
