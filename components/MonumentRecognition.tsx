@@ -123,9 +123,10 @@ const MonumentRecognition: React.FC<MonumentRecognitionProps> = ({ onRecognition
                         {isCameraOpen && <video ref={videoRef} autoPlay className="w-full h-full object-cover"></video>}
                         {!previewUrl && !isCameraOpen && (
                            <div className="text-center text-gray-500 dark:text-gray-400 border-2 border-dashed border-gray-400 dark:border-gray-600 rounded-xl w-full h-full flex flex-col justify-center items-center transition-all duration-300 group-hover:border-primary-500 group-hover:bg-primary-500/10">
-                               <i className="ph-bold ph-image text-6xl mb-2 transition-transform duration-300 group-hover:scale-110"></i>
-                               <p className="font-semibold">Click to upload image</p>
-                               <p className="text-sm">PNG, JPG, JPEG up to 10MB</p>
+                               <i className="ph-bold ph-om text-6xl mb-2 transition-transform duration-300 group-hover:scale-110 text-secondary-500"></i>
+                               <p className="font-semibold text-lg">Namaste!</p>
+                               <p>Click to upload an image</p>
+                               <p className="text-sm mt-2">PNG, JPG, JPEG up to 10MB</p>
                            </div>
                         )}
                         <canvas ref={canvasRef} className="hidden"></canvas>

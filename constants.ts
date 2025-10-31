@@ -22,8 +22,9 @@ export const LANGUAGES: Language[] = [
 ];
 
 export const TABS: Tab[] = [
-    { id: 'recognize', label: 'Recognize', icon: 'ph-camera' },
+    { id: 'recognize', label: 'Recognize', icon: 'ph-om' },
     { id: 'info', label: 'Information', icon: 'ph-book-open-text' },
     { id: 'rush', label: 'Crowd Predict', icon: 'ph-users-three' },
     { id: 'nearby', label: 'Nearby', icon: 'ph-map-pin' },
+    { id: 'ai-guide', label: 'AI Guide', icon: 'ph-robot' },
 ];

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://storage.googleapis.com/aistudio-project-marketplace-public-assets/purv-vaibhav-logo.png" alt="Purv Vaibhav Namaskar Logo" width="150"/>
+</p>
+
 # Purv Vaibhav - Your AI Guide to India's Heritage
 
 <p align="center">

@@ -15,11 +15,11 @@ export const Button: React.FC<ButtonProps> = ({
     className = '',
     ...props
 }) => {
-    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-semibold px-4 py-2.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-gray-900 shadow-sm hover:shadow-md hover:-translate-y-0.5';
+    const baseClasses = 'inline-flex items-center justify-center rounded-lg font-semibold px-4 py-2.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-primary-950 shadow-sm hover:shadow-md hover:-translate-y-0.5';
     
     const variantClasses = {
-        primary: 'bg-primary-600 text-white hover:bg-primary-500 focus:ring-primary-500 disabled:bg-primary-400 dark:disabled:bg-primary-800 dark:disabled:text-gray-500 disabled:transform-none disabled:shadow-none',
-        secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600 focus:ring-primary-500 disabled:bg-gray-100 dark:disabled:bg-gray-800 disabled:transform-none disabled:shadow-none',
+        primary: 'bg-secondary-600 text-white hover:bg-secondary-500 focus:ring-secondary-500 disabled:bg-secondary-400 dark:disabled:bg-secondary-800 dark:disabled:text-gray-500 disabled:transform-none disabled:shadow-none',
+        secondary: 'bg-primary-200 text-primary-800 hover:bg-primary-300 dark:bg-primary-700 dark:text-primary-200 dark:hover:bg-primary-600 focus:ring-secondary-500 disabled:bg-primary-100 dark:disabled:bg-primary-800 disabled:transform-none disabled:shadow-none',
         danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 disabled:bg-red-300 disabled:transform-none disabled:shadow-none',
     };
 

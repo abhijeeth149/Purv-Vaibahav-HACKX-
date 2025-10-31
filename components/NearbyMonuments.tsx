@@ -62,13 +62,13 @@ const NearbyMonuments: React.FC<NearbyMonumentsProps> = ({ onSelectMonument }) =
 
     return (
         <div>
-            <h2 className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500 dark:from-primary-400 dark:to-secondary-400 mb-6">Nearby Monuments</h2>
+            <h2 className="text-4xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-secondary-600 dark:from-primary-400 dark:to-secondary-400 mb-6">Nearby Monuments</h2>
 
             <Card className="p-6 mb-6">
                  <div className="flex flex-col sm:flex-row gap-4 items-center">
                     <div className="flex-1 w-full">
                         <label htmlFor="radius" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                            Search Radius: <span className="font-bold text-primary-600 dark:text-primary-400">{radius} km</span>
+                            Search Radius: <span className="font-bold text-secondary-600 dark:text-secondary-400">{radius} km</span>
                         </label>
                         <input
                             id="radius"
@@ -78,7 +78,7 @@ const NearbyMonuments: React.FC<NearbyMonumentsProps> = ({ onSelectMonument }) =
                             step="10"
                             value={radius}
                             onChange={(e) => setRadius(Number(e.target.value))}
-                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700"
+                            className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 accent-secondary-500"
                         />
                     </div>
                      <div className="flex-1 w-full sm:max-w-xs">
@@ -87,7 +87,7 @@ const NearbyMonuments: React.FC<NearbyMonumentsProps> = ({ onSelectMonument }) =
                             id="sort"
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value as 'distance' | 'name')}
-                            className="w-full p-2.5 border border-gray-300/80 rounded-lg bg-white/80 dark:bg-gray-700/80 dark:border-gray-600/80 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 shadow-sm"
+                            className="w-full p-2.5 border border-gray-300/80 rounded-lg bg-white/80 dark:bg-gray-700/80 dark:border-gray-600/80 focus:ring-2 focus:ring-secondary-500 focus:border-secondary-500 shadow-sm"
                         >
                             <option value="distance">Distance</option>
                             <option value="name">Name (A-Z)</option>
@@ -108,10 +108,10 @@ const NearbyMonuments: React.FC<NearbyMonumentsProps> = ({ onSelectMonument }) =
                     {nearbyMonuments.map(monument => (
                         <Card key={monument.id} className="group" onClick={() => onSelectMonument(monument)}>
                            <div className="overflow-hidden">
-                             <img src={`https://picsum.photos/seed/${monument.id}/400/300`} alt={monument.name} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-110" />
+                             <img src={`https://source.unsplash.com/400x300/?${encodeURIComponent(monument.name)},indian,heritage`} alt={monument.name} className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-110" />
                            </div>
                             <div className="p-4">
-                                <h3 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition">{monument.name}</h3>
+                                <h3 className="font-bold text-lg text-gray-800 dark:text-white group-hover:text-secondary-600 dark:group-hover:text-secondary-400 transition">{monument.name}</h3>
                                 <p className="text-sm text-gray-500 dark:text-gray-400">{monument.category}</p>
                                 <p className="text-sm font-semibold mt-2 text-primary-700 dark:text-primary-300">{monument.distance.toFixed(1)} km away</p>
                             </div>

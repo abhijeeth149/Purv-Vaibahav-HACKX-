@@ -17,8 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, darkMode, set
             onClick={() => onTabChange(tab.id)}
             className={`flex items-center w-full px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 group ${
                 activeTab === tab.id
-                    ? 'bg-primary-600 text-white shadow-lg'
-                    : 'text-gray-600 dark:text-gray-300 hover:bg-primary-500/10 dark:hover:bg-primary-400/10 hover:text-primary-600 dark:hover:text-primary-300'
+                    ? 'bg-secondary-600 text-white shadow-lg'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-secondary-500/10 dark:hover:bg-secondary-400/10 hover:text-secondary-600 dark:hover:text-secondary-300'
             }`}
         >
             <i className={`ph-bold ${tab.icon} text-xl mr-3 transition-transform duration-300 ${activeTab !== tab.id && 'group-hover:scale-110'}`}></i>
@@ -32,10 +32,10 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, darkMode, set
                 className={`fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity lg:hidden ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsSidebarOpen(false)}
             ></div>
-            <aside className={`fixed top-0 left-0 z-50 flex flex-col h-full w-64 bg-white/80 dark:bg-gray-800/80 backdrop-blur-2xl border-r border-gray-200/80 dark:border-gray-700/60 shadow-xl transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+            <aside className={`fixed top-0 left-0 z-50 flex flex-col h-full w-64 bg-white/80 dark:bg-primary-950/80 backdrop-blur-2xl border-r border-gray-200/80 dark:border-gray-700/60 shadow-xl transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
                 <div className="flex items-center justify-between p-4 border-b border-gray-200/80 dark:border-gray-700/60">
                     <div className="flex items-center">
-                        <i className="ph-bold ph-castle-turret text-3xl text-primary-600 dark:text-primary-400"></i>
+                        <i className="ph-bold ph-hands-praying text-3xl text-secondary-600 dark:text-secondary-400"></i>
                         <h1 className="ml-2 text-xl font-display font-bold text-gray-800 dark:text-white">Purv Vaibhav</h1>
                     </div>
                      <button onClick={() => setIsSidebarOpen(false)} className="lg:hidden text-gray-500 dark:text-gray-400">
@@ -54,8 +54,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, onTabChange, darkMode, set
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Dark Mode</span>
                         <button
                             onClick={() => setDarkMode(!darkMode)}
-                            className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
-                                darkMode ? 'bg-primary-600' : 'bg-gray-400'
+                            className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+                                darkMode ? 'bg-secondary-600' : 'bg-gray-400'
                             }`}
                         >
                             <span
