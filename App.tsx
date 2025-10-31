@@ -37,7 +37,7 @@ const App: React.FC = () => {
     const handleSelectMonument = useCallback((monument: Monument | null) => {
         setSelectedMonument(monument);
         if (monument) {
-             setDynamicBackground(`https://picsum.photos/seed/${encodeURIComponent(monument.name)}/1920/1080`);
+             setDynamicBackground(`https://source.unsplash.com/1920x1080/?${encodeURIComponent(monument.name)}`);
             setActiveTab('info');
         } else {
             setDynamicBackground(null);
@@ -55,7 +55,7 @@ const App: React.FC = () => {
             newOrFoundMonument = { id: Date.now(), name: monumentName, latitude: 0, longitude: 0, category: 'Historic' };
         }
         setSelectedMonument(newOrFoundMonument);
-        setDynamicBackground(`https://picsum.photos/seed/${encodeURIComponent(newOrFoundMonument.name)}/1920/1080`);
+        setDynamicBackground(`https://source.unsplash.com/1920x1080/?${encodeURIComponent(newOrFoundMonument.name)}`);
         setActiveTab('info');
     }, []);
 

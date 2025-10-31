@@ -6,21 +6,15 @@ export interface Monument {
     category: string;
 }
 
+export interface Language {
+    code: string;
+    name: string;
+}
+
 export interface Tab {
     id: 'recognize' | 'info' | 'rush' | 'nearby' | 'chat';
     label: string;
     icon: string;
-}
-
-export interface ChatMessage {
-    sender: 'user' | 'bot';
-    text: string;
-    timestamp: string;
-}
-
-export interface Language {
-    code: string;
-    name: string;
 }
 
 export interface RushPrediction {
@@ -29,10 +23,15 @@ export interface RushPrediction {
     recommendation: string;
 }
 
-export interface MonumentInfo {
-    summary: string;
-    architecture: string;
-    keyFacts: { label: string; value: string }[];
-    guidelines: string;
-    precautions: string;
+export interface ChatMessage {
+    sender: 'user' | 'bot';
+    text: string;
+    timestamp: string;
+}
+
+export interface MonumentInfo extends Monument {
+    description: string;
+    history: string;
+    bestTimeToVisit: string;
+    entryFee: string;
 }

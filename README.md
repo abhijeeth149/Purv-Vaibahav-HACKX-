@@ -1,8 +1,7 @@
-
 # Purv Vaibhav - Your AI Guide to India's Heritage
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/user-attachments/assets/91c10d3f-8461-460b-870a-0d85a089d4d8" alt="Purv Vaibhav Logo" width="150"/>
+  <img src="https://storage.googleapis.com/aistudio-project-marketplace-public-assets/purv-vaibhav-banner.png" alt="A screenshot of the Purv Vaibhav application showing the Taj Mahal information page."/>
 </p>
 
 <h3 align="center"> Ancient Glory, Modern Technology </h3>
