@@ -4,10 +4,10 @@
 
 A project for the **HACKX Hackathon [Purv Vaibhav]** by our Team:**Vanara**.
 ## Team Purv Vaibhav
-**Gandla Abhijeeth** - AI & Backend Data Integration
-**Thammishetti Rohith** - UI/UX Designer
+**Gandla Abhijeeth** - AI & Backend Data Integration.
+**Thammishetti Rohith** - UI/UX Designer.
 **Gajula Anish** - Presentation Lead - Managed data preparation and created the final PPT.
-**Karrolla Nishank Nanda Kishore** - Researcher Data Analyst
+**Karrolla Nishank Nanda Kishore** - Researcher Data Analyst'
 
 <h3 align="center"> Ancient Glory, Modern Technology </h3>
 
@@ -126,7 +126,6 @@ This project has a lot of potential for growth. Here are some features I'm consi
 
 ---
 
-Made with ❤️ for the love of Indian heritage.
 ## Challenges We Ran Into
 [...Briefly mention 1-2 difficult problems you solved. This is great for hackathon judging! e.g., "We struggled with prompt engineering to get the AI to return data in a consistent JSON format."...]
 
